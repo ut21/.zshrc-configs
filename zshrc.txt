@@ -1,0 +1,18 @@
+function mkcd
+{
+  dir="$*";
+  mkdir -p "$dir" && cd "$dir";
+}
+
+function del
+{
+  current_dir=$(pwd)
+  cd ..
+  rm -r "$current_dir"
+}
+
+function code
+{
+  file="$*";
+  touch "$file" && open "$file";
+}
